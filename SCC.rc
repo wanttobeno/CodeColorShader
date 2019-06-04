@@ -1,0 +1,390 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SCC.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\SCC.ico"
+IDI_ICON_LEDOFF         ICON    DISCARDABLE     "res\\LedOff.ico"
+IDI_ICON_LEDON          ICON    DISCARDABLE     "res\\LedOn.ico"
+IDI_ICON_BROWSE         ICON    DISCARDABLE     "res\\Browse.ico"
+IDI_ICON_PROCESS        ICON    DISCARDABLE     "res\\Process.ico"
+IDI_ICON_ABOUT          ICON    DISCARDABLE     "res\\About.ico"
+IDI_ICON_EXECUTE        ICON    DISCARDABLE     "res\\Execute.ico"
+IDI_ICON_CONFIG_ON      ICON    DISCARDABLE     "res\\Config_On.ico"
+IDI_ICON_CONFIG_OFF     ICON    DISCARDABLE     "res\\Config_Off.ico"
+IDI_ICON_ABOUTDLG_OK    ICON    DISCARDABLE     "res\\AboutDlg_OK.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 88
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 老罗代码着色器..."
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定(&O)",IDOK,158,7,70,25,BS_FLAT | WS_GROUP
+    LTEXT           "老罗的缤纷天地",IDC_STATIC_HOMEPAGE,7,51,57,8
+    LTEXT           "lcother@163.net",IDC_STATIC_EMAIL,7,63,61,8
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,11,20,20
+    LTEXT           "老罗代码着色器 v0.35",IDC_STATIC,40,10,100,8,
+                    SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2003-1-22",IDC_STATIC,40,25,100,8
+    GROUPBOX        "",IDC_STATIC,76,38,152,43
+    LTEXT           "特别感谢vBin、Yonsm、破解勇",IDC_STATIC,99,51,109,8
+    LTEXT           "还有看雪以及看雪论坛上的朋友们",IDC_STATIC,92,65,121,8
+END
+
+IDD_SCC_DIALOG DIALOGEX 0, 0, 320, 240
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
+CAPTION "老罗代码着色器 :: v0.35"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "",IDC_BUTTON_BROWSE,281,17,19,14,BS_CENTER | BS_VCENTER | 
+                    BS_FLAT
+    EDITTEXT        IDC_EDIT_FILE_SOURCE,66,21,204,14,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_FILE_DESTINATION,66,43,204,14,ES_AUTOHSCROLL | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "使用&HTML标签",IDC_RADIO_STYLE_HTML,"Button",
+                    BS_AUTORADIOBUTTON | BS_FLAT | WS_GROUP | WS_TABSTOP,36,
+                    69,64,10
+    CONTROL         "使用&UBB标签",IDC_RADIO_STYLE_UBB,"Button",
+                    BS_AUTORADIOBUTTON | BS_FLAT | WS_TABSTOP,132,69,60,10
+    CONTROL         "(&S)显示行号",IDC_CHECK_SHOWLINENUM,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,224,69,60,10
+    CONTROL         "通过文件转换(&F)",IDC_RADIO_CONVERT_BY_FILE,"Button",
+                    BS_AUTORADIOBUTTON | BS_FLAT | WS_GROUP | WS_TABSTOP,36,
+                    86,76,10
+    CONTROL         "直接转换(&D)",IDC_RADIO_CONVERT_DIRECT,"Button",
+                    BS_AUTORADIOBUTTON | BS_FLAT | WS_TABSTOP,132,86,60,10
+    COMBOBOX        IDC_COMBO_DIRECTCONVERT_STX,243,85,41,30,
+                    CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "转换(&T)",IDC_BUTTON_PROCESS,124,117,70,25,BS_FLAT
+    PUSHBUTTON      "关于(&A)",IDC_BUTTON_ABOUT,24,119,70,20,BS_FLAT
+    PUSHBUTTON      "设置(&C)",IDC_BUTTON_CONFIG,224,119,70,20,BS_FLAT
+    EDITTEXT        IDC_EDIT_OUTPUT,7,152,306,78,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_WANTRETURN | NOT WS_BORDER | 
+                    WS_VSCROLL,WS_EX_STATICEDGE
+    LTEXT           "源 文 件：",IDC_STATIC,20,25,41,8
+    LTEXT           "输出文件：",IDC_STATIC,20,47,41,8
+    GROUPBOX        "设置",IDC_STATIC,7,7,306,101
+    PUSHBUTTON      "",IDC_BUTTON_EXECUTE,281,40,19,14,BS_CENTER | 
+                    BS_VCENTER | BS_FLAT
+    LTEXT           "类型",IDC_STATIC,224,88,17,8
+END
+
+IDD_DIALOG_CONFIG DIALOGEX 0, 0, 135, 212
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "确定",IDOK,7,191,40,14,BS_FLAT
+    PUSHBUTTON      "",IDC_BUTTON_COLOR_KEYWORD,53,21,25,10,BS_CENTER | 
+                    BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "",IDC_BUTTON_COLOR_MACRO,53,33,25,10,BS_CENTER | 
+                    BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "",IDC_BUTTON_COLOR_REGISTER,53,45,25,10,BS_CENTER | 
+                    BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "",IDC_BUTTON_COLOR_QUOTATION,53,57,25,10,BS_CENTER | 
+                    BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "",IDC_BUTTON_COLOR_COMMENT,53,69,25,10,BS_CENTER | 
+                    BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "",IDC_BUTTON_COLOR_LINENUM,53,81,25,10,BS_CENTER | 
+                    BS_VCENTER | BS_FLAT
+    CONTROL         "将TAB 转换成 空格    ",IDC_CHECK_CHANGETABTOSPACE,
+                    "Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_FLAT | 
+                    WS_TABSTOP,18,116,100,10
+    CONTROL         "将空格转换成 &&nbsp   ",IDC_CHECK_CHANGESPACETONBSP,
+                    "Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_FLAT | 
+                    WS_TABSTOP,18,127,100,10
+    CONTROL         "将回车转换成 <br>    ",IDC_CHECK_CHANGECRLFTOBR,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_FLAT | WS_TABSTOP,18,
+                    139,100,10
+    EDITTEXT        IDC_EDIT_TAB_SPACE,88,151,30,10,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "Spin1",IDC_SPIN_TAB_SPACE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,108,151,10,10
+    EDITTEXT        IDC_EDIT_LINENUM_INDENT,88,164,30,10,ES_AUTOHSCROLL | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "Spin1",IDC_SPIN_LINENUM_INDENT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,108,164,10,10
+    PUSHBUTTON      "默认",IDC_BUTTON_USE_DEFAULT,47,191,40,14,BS_FLAT
+    PUSHBUTTON      "取消",IDCANCEL,87,191,40,14,BS_FLAT
+    EDITTEXT        IDC_EDIT_COLOR_KEYWORD,88,21,30,10,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_COLOR_MACRO,88,33,30,10,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_COLOR_REGISTER,88,45,30,10,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_COLOR_QUOTATION,88,57,30,10,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_COLOR_COMMENT,88,69,30,10,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_COLOR_LINENUM,88,81,30,10,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_BORDER,WS_EX_STATICEDGE
+    GROUPBOX        "自定义颜色",IDC_STATIC,7,7,121,93
+    LTEXT           "关键字",IDC_STATIC,19,22,25,8
+    LTEXT           "宏定义",IDC_STATIC,19,34,25,8
+    LTEXT           "寄存器",IDC_STATIC,19,46,25,8
+    LTEXT           "注  释",IDC_STATIC,19,70,25,8
+    LTEXT           "行  号",IDC_STATIC,19,82,25,8
+    GROUPBOX        "Tab/Indent",IDC_STATIC,7,104,121,80
+    LTEXT           "行号后的空格数",IDC_STATIC,19,165,57,8
+    LTEXT           "双引号",IDC_STATIC,19,58,25,8
+    LTEXT           "TAB 所占空格数",IDC_STATIC,19,153,57,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,3,5,0
+ PRODUCTVERSION 0,3,5,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "http://www.LuoCong.com\0"
+            VALUE "FileDescription", "老罗代码着色器 - 老罗荣誉作品\0"
+            VALUE "FileVersion", "0, 3, 5, 0\0"
+            VALUE "InternalName", "SCC\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "SCC.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "老罗代码着色器\0"
+            VALUE "ProductVersion", "0, 3, 5, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 81
+    END
+
+    IDD_SCC_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_DIALOG_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 205
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1 24 DISCARDABLE 
+BEGIN
+    0x3f3c, 0x6d78, 0x206c, 0x6576, 0x7372, 0x6f69, 0x3d6e, 0x3122, 0x302e, 
+    0x2022, 0x6e65, 0x6f63, 0x6964, 0x676e, 0x223d, 0x5455, 0x2d46, 0x2238, 
+    0x7320, 0x6174, 0x646e, 0x6c61, 0x6e6f, 0x3d65, 0x7922, 0x7365, 0x3f22, 
+    0x203e, 0x0a0d, 0x613c, 0x7373, 0x6d65, 0x6c62, 0x2079, 0x6d78, 0x6e6c, 
+    0x3d73, 0x7522, 0x6e72, 0x733a, 0x6863, 0x6d65, 0x7361, 0x6d2d, 0x6369, 
+    0x6f72, 0x6f73, 0x7466, 0x632d, 0x6d6f, 0x613a, 0x6d73, 0x762e, 0x2231, 
+    0x6d20, 0x6e61, 0x6669, 0x7365, 0x5674, 0x7265, 0x6973, 0x6e6f, 0x223d, 
+    0x2e31, 0x2230, 0x203e, 0x0a0d, 0x613c, 0x7373, 0x6d65, 0x6c62, 0x4979, 
+    0x6564, 0x746e, 0x7469, 0x2079, 0x6576, 0x7372, 0x6f69, 0x3d6e, 0x3122, 
+    0x302e, 0x302e, 0x302e, 0x2022, 0x7270, 0x636f, 0x7365, 0x6f73, 0x4172, 
+    0x6372, 0x6968, 0x6574, 0x7463, 0x7275, 0x3d65, 0x5822, 0x3638, 0x2022, 
+    0x616e, 0x656d, 0x223d, 0x6f43, 0x706d, 0x6e61, 0x4e79, 0x6d61, 0x2e65, 
+    0x7250, 0x646f, 0x6375, 0x4e74, 0x6d61, 0x2e65, 0x6f59, 0x7275, 0x7041, 
+    0x2270, 0x7420, 0x7079, 0x3d65, 0x7722, 0x6e69, 0x3233, 0x2f22, 0x203e, 
+    0x0a0d, 0x643c, 0x7365, 0x7263, 0x7069, 0x6974, 0x6e6f, 0x593e, 0x756f, 
+    0x2072, 0x7061, 0x6c70, 0x6369, 0x7461, 0x6f69, 0x206e, 0x6564, 0x6373, 
+    0x6972, 0x7470, 0x6f69, 0x206e, 0x6568, 0x6572, 0x3c2e, 0x642f, 0x7365, 
+    0x7263, 0x7069, 0x6974, 0x6e6f, 0x203e, 0x0a0d, 0x643c, 0x7065, 0x6e65, 
+    0x6564, 0x636e, 0x3e79, 0x0d20, 0x3c0a, 0x6564, 0x6570, 0x646e, 0x6e65, 
+    0x4174, 0x7373, 0x6d65, 0x6c62, 0x3e79, 0x0d20, 0x3c0a, 0x7361, 0x6573, 
+    0x626d, 0x796c, 0x6449, 0x6e65, 0x6974, 0x7974, 0x7420, 0x7079, 0x3d65, 
+    0x7722, 0x6e69, 0x3233, 0x2022, 0x616e, 0x656d, 0x223d, 0x694d, 0x7263, 
+    0x736f, 0x666f, 0x2e74, 0x6957, 0x646e, 0x776f, 0x2e73, 0x6f43, 0x6d6d, 
+    0x6e6f, 0x432d, 0x6e6f, 0x7274, 0x6c6f, 0x2273, 0x7620, 0x7265, 0x6973, 
+    0x6e6f, 0x223d, 0x2e36, 0x2e30, 0x2e30, 0x2230, 0x7020, 0x6f72, 0x6563, 
+    0x7373, 0x726f, 0x7241, 0x6863, 0x7469, 0x6365, 0x7574, 0x6572, 0x223d, 
+    0x3858, 0x2236, 0x7020, 0x6275, 0x696c, 0x4b63, 0x7965, 0x6f54, 0x656b, 
+    0x3d6e, 0x3622, 0x3935, 0x6235, 0x3436, 0x3431, 0x6334, 0x6663, 0x6431, 
+    0x2266, 0x6c20, 0x6e61, 0x7567, 0x6761, 0x3d65, 0x2a22, 0x2f22, 0x203e, 
+    0x0a0d, 0x2f3c, 0x6564, 0x6570, 0x646e, 0x6e65, 0x4174, 0x7373, 0x6d65, 
+    0x6c62, 0x3e79, 0x0d20, 0x3c0a, 0x642f, 0x7065, 0x6e65, 0x6564, 0x636e, 
+    0x3e79, 0x0d20, 0x3c0a, 0x612f, 0x7373, 0x6d65, 0x6c62, 0x3e79
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_HAND         CURSOR  DISCARDABLE     "res\\Hand.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SCC_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_DIRECTCONVERT_STX, 0x403, 4, 0
+0x5341, 0x004d, 
+    IDC_COMBO_DIRECTCONVERT_STX, 0x403, 4, 0
+0x2b43, 0x002b, 
+    IDC_COMBO_DIRECTCONVERT_STX, 0x403, 2, 0
+0x0043, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 老罗代码着色器(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\SCC.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
